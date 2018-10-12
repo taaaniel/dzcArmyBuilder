@@ -1,0 +1,65 @@
+<div class="header">
+  <mat-card fxLayout="row">
+        <div fxFlex= "350px">
+            <mat-card-title>Dropzone Commander</mat-card-title>
+            <mat-card-subtitle>{{ 'HEADER.ARMY_BUILDER' | translate: lang }}</mat-card-subtitle>
+        </div>
+        <div fxFlex></div>
+        <ul class="nav" fxFlex="350px" fxLayout="row" fxLayoutAlign="center center">
+          <li fxFlex= "50px" fxLayoutAlign="center center">
+              <button mat-icon-button [matMenuTriggerFor]="notificationSmallMenu">
+                <mat-icon>notifications_none</mat-icon>
+              </button>
+              <mat-menu  #notificationSmallMenu overlapTrigger="false">
+                  <mat-list>
+                      <mat-list-item>Item 1</mat-list-item>
+                      <mat-divider></mat-divider>
+                      <mat-list-item>Item 2</mat-list-item>
+                      <mat-divider></mat-divider>
+                      <mat-list-item>Item 3</mat-list-item>
+                  </mat-list>
+              </mat-menu>
+            </li>
+            <li fxFlex= "50px" fxLayoutAlign="center center">
+              <button mat-button [matMenuTriggerFor]="menu1">
+                <span class="flag flag-{{ selectedLanguage }}"></span>
+                <span>{{ selectedLanguage }}</span>
+                <mat-icon>arrow_drop_down</mat-icon>
+              </button>
+              <mat-menu  #menu1 overlapTrigger="false">
+                <button (click)="selectLanguage('en')" mat-menu-item>
+                  <span class="flag flag-en"></span>
+                  {{ 'HEADER.LANGUAGE_ENGLISH' | translate: lang }}
+                </button>
+                <button (click)="selectLanguage('pl')" mat-menu-item>
+                  <span class="flag flag-pl"></span>
+                  {{ 'HEADER.LANGUAGE_POLISH' | translate: lang }}
+              </button>
+              </mat-menu>
+            </li>
+
+            <li fxFlex= "50px" fxLayoutAlign="center center">
+                <button mat-button [matMenuTriggerFor]="menu1">
+                  <span>John Doe</span>
+                  <mat-icon>arrow_drop_down</mat-icon>
+                  <span class="header_nav_person-img">
+                      <mat-icon>person</mat-icon>
+                  </span>
+
+                </button>
+                <mat-menu  #menu1 overlapTrigger="false">
+                  <button (click)="selectLanguage('en')" mat-menu-item>
+                    <span class="flag flag-en"></span>
+                    {{ 'HEADER.LANGUAGE_ENGLISH' | translate: lang }}
+                  </button>
+                  <button (click)="selectLanguage('pl')" mat-menu-item>
+                    <span class="flag flag-pl"></span>
+                    {{ 'HEADER.LANGUAGE_POLISH' | translate: lang }}
+                </button>
+                </mat-menu>
+              </li>
+        </ul>
+
+
+  </mat-card>
+</div>

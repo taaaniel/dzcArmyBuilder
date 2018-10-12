@@ -1,0 +1,23 @@
+{
+  "COMMON": {
+    "BUTTON": {
+      "CLEAR_LIST": "Clear list"
+    }
+  },
+  "HEADER": {
+    "LANGUAGE_ENGLISH": "English",
+    "LANGUAGE_POLISH": "Polish",
+    "ARMY_BUILDER": "Army builder"
+  },
+  "SIDEBAR": {
+    "ROSTER": "Roster",
+    "ROSTER_FOR": "Roster for:"
+  },
+  "DASHBOARD": {
+    "CHOOSE_YOUR_ARMY": "Choose your army",
+    "GAME_SIZE": "Game size",
+    "YOUR_ARMY_IS": "Your army is",
+    "YOUR_CURRENT_PTS": "Your current PTS"
+  }
+
+}

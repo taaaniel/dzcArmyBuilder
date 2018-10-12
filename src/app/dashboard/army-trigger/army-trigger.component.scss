@@ -1,0 +1,19 @@
+.armyTrigger {
+
+  button {
+    margin-right: 5px;
+  }
+
+  mat-radio-button {
+    margin-right: 10px;
+  }
+
+  &__armySize {
+    margin-bottom: 15px;
+  }
+
+  &__gameSizeTitle + span {
+    font-size: small;
+  }
+
+}

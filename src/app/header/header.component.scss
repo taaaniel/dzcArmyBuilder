@@ -1,0 +1,22 @@
+.header {
+  .mat-card {
+    padding: 0 24px;
+    height: 67px;
+  }
+  .mat-card-title {
+    margin:10px 0 5px;
+  }
+
+  ul.nav {
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-right: 25px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}

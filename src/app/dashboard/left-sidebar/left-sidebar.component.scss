@@ -1,0 +1,17 @@
+.leftSidebar {
+  position: absolute;
+  height: 100%;
+  max-width: 250px;
+  padding: 15px 0;
+
+  mat-card-title, mat-card-subtitle {
+    text-align: center;
+  }
+
+  &__icon {
+    margin-right: 15px;
+    margin-left: -3px;
+
+  }
+
+}

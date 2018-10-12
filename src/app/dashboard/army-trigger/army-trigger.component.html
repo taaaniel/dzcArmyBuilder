@@ -1,0 +1,31 @@
+<mat-card fxLayout="column" class="armyTrigger">
+  <div fxLayout="row" class="armyTrigger__armySize">
+      <div fxFlex>
+          {{ 'DASHBOARD.GAME_SIZE' | translate: lang }} :
+          <mat-radio-group>
+            <mat-radio-button value="1">
+              <div class="armyTrigger__gameSizeTitle">Skirmish</div>
+              <span>500-999pts</span>
+            </mat-radio-button>
+            <mat-radio-button value="2">
+              <div class="armyTrigger__gameSizeTitle">Clash</div>
+              <span>1000-1999pts</span>
+            </mat-radio-button>
+            <mat-radio-button value="3">
+              <div class="armyTrigger__gameSizeTitle">Battle</div>
+              <span>2000-3000pts</span>
+            </mat-radio-button>
+          </mat-radio-group>
+      </div>
+    </div>
+    <div fxLayout="row">
+    <div fxFlex>
+        {{ 'DASHBOARD.CHOOSE_YOUR_ARMY' | translate: lang }} :
+        <button mat-flat-button color="accent" >UCM</button>
+        <button mat-flat-button >PHR</button>
+        <button mat-flat-button >Resistance</button>
+        <button mat-flat-button >Scourge</button>
+        <button mat-flat-button >Shaltari</button>
+    </div>
+  </div>
+</mat-card>

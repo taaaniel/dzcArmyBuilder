@@ -1,0 +1,12 @@
+{
+  "COMMON": {
+    "BUTTON": {
+      "CLEAR_LIST": "Wyczyć listę"
+    }
+  },
+  "HEADER": {
+    "LANGUAGE_ENGLISH": "Angielski",
+    "LANGUAGE_POLISH": "Polski",
+    "ARMY_BUILDER": "Projektant armii"
+  }
+}
