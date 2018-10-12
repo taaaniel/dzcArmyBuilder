@@ -9,6 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LeftSidebarComponent } from './dashboard/left-sidebar/left-sidebar.component';
 import { ArmyTriggerComponent } from './dashboard/army-trigger/army-trigger.component';
+import { FormsModule } from '../../node_modules/@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ArmyTriggerComponent } from './dashboard/army-trigger/army-trigger.comp
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

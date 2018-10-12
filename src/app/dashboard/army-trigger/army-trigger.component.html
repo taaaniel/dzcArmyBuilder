@@ -1,31 +1,54 @@
 <mat-card fxLayout="column" class="armyTrigger">
+  <form class="example-form">
   <div fxLayout="row" class="armyTrigger__armySize">
       <div fxFlex>
           {{ 'DASHBOARD.GAME_SIZE' | translate: lang }} :
-          <mat-radio-group>
-            <mat-radio-button value="1">
+          <mat-radio-group [(ngModel)]="roster.gameSize" name="gameSize">
+            <mat-radio-button value="skirmish">
               <div class="armyTrigger__gameSizeTitle">Skirmish</div>
               <span>500-999pts</span>
             </mat-radio-button>
-            <mat-radio-button value="2">
+            <mat-radio-button value="clash">
               <div class="armyTrigger__gameSizeTitle">Clash</div>
               <span>1000-1999pts</span>
             </mat-radio-button>
-            <mat-radio-button value="3">
+            <mat-radio-button value="battle">
               <div class="armyTrigger__gameSizeTitle">Battle</div>
               <span>2000-3000pts</span>
             </mat-radio-button>
           </mat-radio-group>
+          fgfgf:{{roster.gameSize}}
+          {{ 'DASHBOARD.SIZE_OF_YOUR_ARMY_IN_POINTS' | translate: lang }} :
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Add your pts" value="" [(ngModel)]="roster.armySize" name="armySize">
+          </mat-form-field>
       </div>
-    </div>
-    <div fxLayout="row">
+  </div>
+  <div fxLayout="row">
     <div fxFlex>
         {{ 'DASHBOARD.CHOOSE_YOUR_ARMY' | translate: lang }} :
-        <button mat-flat-button color="accent" >UCM</button>
-        <button mat-flat-button >PHR</button>
-        <button mat-flat-button >Resistance</button>
-        <button mat-flat-button >Scourge</button>
-        <button mat-flat-button >Shaltari</button>
+        <mat-radio-group [(ngModel)]="roster.armyName" name="armyName">
+            <mat-radio-button value="ucm">
+              <div class="armyTrigger__gameArmyName">UCM</div>
+            </mat-radio-button>
+            <mat-radio-button value="phr">
+                <div class="armyTrigger__gameArmyName">PHR</div>
+            </mat-radio-button>
+            <mat-radio-button value="scourge">
+                <div class="armyTrigger__gameArmyName">Scourge</div>
+            </mat-radio-button>
+            <mat-radio-button value="resistance">
+                <div class="armyTrigger__gameArmyName">Resistance</div>
+            </mat-radio-button>
+            <mat-radio-button value="shaltari">
+                <div class="armyTrigger__gameArmyName">Shaltari</div>
+            </mat-radio-button>
+        </mat-radio-group>
     </div>
+    <div fxFlex>
+        <button mat-flat-button color="accent" (click)="createRoster(roster.gameSize, roster.armySize, roster.armyName)">{{ 'DASHBOARD.CREATE_YOUR_ARMY' | translate: lang }}</button>
+    </div>
+
   </div>
+  </form>
 </mat-card>
