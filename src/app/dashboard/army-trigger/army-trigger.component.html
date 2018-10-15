@@ -17,7 +17,6 @@
               <span>2000-3000pts</span>
             </mat-radio-button>
           </mat-radio-group>
-          fgfgf:{{roster.gameSize}}
           {{ 'DASHBOARD.SIZE_OF_YOUR_ARMY_IN_POINTS' | translate: lang }} :
           <mat-form-field class="example-full-width">
               <input matInput placeholder="Add your pts" value="" [(ngModel)]="roster.armySize" name="armySize">
@@ -46,7 +45,9 @@
         </mat-radio-group>
     </div>
     <div fxFlex>
-        <button mat-flat-button color="accent" (click)="getDataToCreateRoster(roster.gameSize, roster.armySize, roster.armyName)">{{ 'DASHBOARD.CREATE_YOUR_ARMY' | translate: lang }}</button>
+        <button
+        mat-flat-button color="accent"
+        (click)="getDataToCreateRoster(roster.gameSize, roster.armySize, roster.armyName)">{{ 'DASHBOARD.CREATE_YOUR_ARMY' | translate: lang }}</button>
     </div>
 
   </div>

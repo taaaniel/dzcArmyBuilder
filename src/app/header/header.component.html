@@ -6,6 +6,9 @@
         </div>
         <div fxFlex></div>
         <ul class="nav" fxFlex="350px" fxLayout="row" fxLayoutAlign="center center">
+            <li fxFlex= "150px" fxLayoutAlign="center center">
+                <button [routerLink]="['/create-roster']" fxFlex mat-raised-button>Build Your Army</button>
+            </li>
           <li fxFlex= "50px" fxLayoutAlign="center center">
               <button mat-icon-button [matMenuTriggerFor]="notificationSmallMenu">
                 <mat-icon>notifications_none</mat-icon>
@@ -59,7 +62,6 @@
                 </mat-menu>
               </li>
         </ul>
-
-
+        <div fxFlex="100px"></div>
   </mat-card>
 </div>

@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '../../../node_modules/@angular/flex-layout';
 import { CreateRosterService } from '../_services/create-roster.service';
 import { AppRoutingModule } from '../app-routing.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { ArmyCreatorComponent } from './army-creator/army-creator.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
   declarations: [
     DashboardComponent,
     LeftSidebarComponent,
-    ArmyTriggerComponent
+    ArmyTriggerComponent,
+    ArmyCreatorComponent
   ],
   exports: [
     DashboardComponent
