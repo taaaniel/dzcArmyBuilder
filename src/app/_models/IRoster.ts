@@ -3,3 +3,9 @@ export interface IRoster {
   armySize: number;
   armyName: string;
 }
+
+export const CreateEmptyRosterInView: () => IRoster = () => ({
+  gameSize: '',
+  armySize: 0,
+  armyName: '',
+});

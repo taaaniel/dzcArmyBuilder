@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LocaleService, TranslationService, Language } from '../../../../node_modules/angular-l10n';
-import { IRoster } from '../../_models/IRoster';
+import { LocaleService, TranslationService, Language } from 'angular-l10n';
+import { IRoster, CreateEmptyRosterInView } from '../../_models/IRoster';
+import { CreateRosterService } from '../../_services/create-roster.service';
 
 @Component({
   selector: 'app-army-trigger',
@@ -13,21 +14,23 @@ export class ArmyTriggerComponent implements OnInit {
 
   constructor(
     public locale: LocaleService,
-    public translation: TranslationService
+    public translation: TranslationService,
+    private createRosterService: CreateRosterService,
   ) { }
 
   @Language() lang: string;
 
   ngOnInit() {
-    this.roster = {
-      gameSize: '',
-      armySize: 0,
-      armyName: ''
-    };
+    this.roster = CreateEmptyRosterInView();
   }
 
-  createRoster(gameSize, armySize, armyName) {
-    console.log("asasa", gameSize, armySize, armyName);
+  getDataToCreateRoster(gameSize, armySize, armyName) {
+    this.roster = {
+      gameSize : gameSize,
+      armySize : armySize,
+      armyName : armyName,
+    };
+    this.createRosterService.shareRoster(this.roster);
   }
 
 }

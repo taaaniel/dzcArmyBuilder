@@ -3,10 +3,13 @@
     <mat-card-subtitle>{{ 'SIDEBAR.ROSTER_FOR' | translate: lang }}:</mat-card-subtitle>
   <mat-list role="list">
       <mat-list-item role="listitem">
-          {{ 'DASHBOARD.YOUR_ARMY_IS' | translate: lang }} : UCM
+          {{ 'DASHBOARD.YOUR_ARMY_IS' | translate: lang }} : {{ fullRoster.armyName}}
       </mat-list-item>
       <mat-list-item role="listitem">
-          {{ 'DASHBOARD.GAME_SIZE' | translate: lang }} :
+          {{ 'DASHBOARD.GAME_SIZE' | translate: lang }} : {{ fullRoster.gameSize}}
+      </mat-list-item>
+      <mat-list-item role="listitem">
+          {{ 'DASHBOARD.GAME_SIZE_IN_PTS' | translate: lang }} : {{ fullRoster.armySize}}
       </mat-list-item>
       <mat-list-item role="listitem">
           {{ 'DASHBOARD.YOUR_CURRENT_PTS' | translate: lang }} :

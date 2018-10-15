@@ -6,25 +6,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './header/header.component';
 import { SharedModule } from '../shared/shared.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { LeftSidebarComponent } from './dashboard/left-sidebar/left-sidebar.component';
-import { ArmyTriggerComponent } from './dashboard/army-trigger/army-trigger.component';
-import { FormsModule } from '../../node_modules/@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DashboardComponent,
-    LeftSidebarComponent,
-    ArmyTriggerComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    DashboardModule,
+    AppRoutingModule,
+    DashboardRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

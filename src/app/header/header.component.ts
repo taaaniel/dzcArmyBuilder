@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LocaleService, TranslationService, Language } from '../../../node_modules/angular-l10n';
+import { LocaleService, TranslationService, Language } from 'angular-l10n';
 
 @Component({
   selector: 'app-header',
