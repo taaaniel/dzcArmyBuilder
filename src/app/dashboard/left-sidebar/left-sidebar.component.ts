@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LocaleService, TranslationService, Language } from 'angular-l10n';
 import { CreateRosterService } from '../../_services/create-roster.service';
 import { IRoster, CreateEmptyRosterInView } from '../../_models/IRoster';
+import { ActivatedRoute } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-left-sidebar',
@@ -15,6 +16,7 @@ export class LeftSidebarComponent implements OnInit {
   constructor(
     public locale: LocaleService,
     public translation: TranslationService,
+    private activeRoute: ActivatedRoute,
     private createRosterService: CreateRosterService,
   ) { }
 
@@ -27,7 +29,16 @@ export class LeftSidebarComponent implements OnInit {
     this.createRosterService.fullRoster$.subscribe((roster) => {
       this.fullRoster = roster;
     });
-    console.log('leftsidebar works');
+
+  }
+
+  loadRoster() {
+    // this.fullRoster.armySize = +this.route.snapshot.params['armySize'];
+    // this.fullRoster.gameSize = this.route.snapshot.params['gameSize'];
+    // this.fullRoster.armyName = this.route.snapshot.params['armyName'];
+    // const id = this.route.snapshot.queryParams['armyName'];
+
+    // console.log("armySize", this.route.snapshot.params);
   }
 
 

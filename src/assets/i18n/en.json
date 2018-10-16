@@ -21,6 +21,20 @@
     "YOUR_CURRENT_PTS": "Your current PTS",
     "SIZE_OF_YOUR_ARMY_IN_POINTS": "Size of your army in points",
     "CREATE_YOUR_ARMY": "Create army"
+  },
+  "ARMY_CREATOR": {
+    "TOTAL_ALLOWANCE": "Total allowance",
+    "BATTLEGROUT_TYPE": "Battlegroup type",
+    "MIN": "Min",
+    "MAX": "Max",
+    "ACTUAL": "Actual",
+    "HQ": "HQ",
+    "ARMOR": "Armor",
+    "INFANTRY": "Infantry",
+    "SPECIAL": "Special",
+    "FLEET": "Fleet"
+
+
   }
 
 }

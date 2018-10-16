@@ -1,5 +1,59 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row fxLayout="row">
-      <span fxFlex>{{ 'ARMY_CREATOR.TOTAL_ALLOWANCE' | translate: lang  }}</span>
-    </mat-toolbar-row>
-</mat-toolbar>
+<div class="army-creator">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row fxLayout="row">
+            <span fxFlex="220px">{{ 'ARMY_CREATOR.BATTLEGROUT_TYPE' | translate: lang }}</span>
+            <span class="army-creator__groupRange" fxFlex="50px">{{ 'ARMY_CREATOR.MIN' | translate: lang }}</span>
+            <span class="army-creator__groupRange" fxFlex="50px">{{ 'ARMY_CREATOR.MAX' | translate: lang }}</span>
+            <span class="army-creator__groupRange" fxFlex="50px">{{ 'ARMY_CREATOR.ACTUAL' | translate: lang }}</span>
+          </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-toolbar>
+        <mat-toolbar-row fxLayout="row">
+          <span fxFlex="220px">{{ 'ARMY_CREATOR.TOTAL_ALLOWANCE' | translate: lang }}</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">3</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">5</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">0</span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-toolbar>
+        <mat-toolbar-row fxLayout="row">
+          <span fxFlex="220px">{{ 'ARMY_CREATOR.HQ' | translate: lang }}</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">3</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">5</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">0</span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-toolbar>
+        <mat-toolbar-row fxLayout="row">
+          <span fxFlex="220px">{{ 'ARMY_CREATOR.ARMOR' | translate: lang }}</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">3</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">5</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">0</span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-toolbar>
+        <mat-toolbar-row fxLayout="row">
+          <span fxFlex="220px">{{ 'ARMY_CREATOR.INFANTRY' | translate: lang }}</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">3</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">5</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">0</span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-toolbar>
+        <mat-toolbar-row fxLayout="row">
+          <span fxFlex="220px">{{ 'ARMY_CREATOR.SPECIAL' | translate: lang }}</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">3</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">5</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">0</span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-toolbar>
+        <mat-toolbar-row fxLayout="row">
+          <span fxFlex="220px">{{ 'ARMY_CREATOR.FLEET' | translate: lang }}</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">3</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">5</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">0</span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>
+

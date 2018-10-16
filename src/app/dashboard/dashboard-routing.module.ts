@@ -9,7 +9,7 @@ const DASHBOARD_ROUTES: Route[] = [
   { path: '', component : DashboardComponent,
     children: [
       { path: 'create-roster', component: ArmyTriggerComponent},
-      { path: 'create-army', component: ArmyCreatorComponent}
+      { path: 'create-army/:gameSize/:armySize/:armyName', component: ArmyCreatorComponent}
     ]
   }
 ];
