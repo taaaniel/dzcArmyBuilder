@@ -7,53 +7,22 @@
             <span class="army-creator__groupRange" fxFlex="50px">{{ 'ARMY_CREATOR.ACTUAL' | translate: lang }}</span>
           </mat-toolbar-row>
     </mat-toolbar>
-    <mat-toolbar>
+
+    <ng-container *ngIf="battleGroups" >
+      <mat-toolbar *ngFor="let battleGroup of battleGroups">
         <mat-toolbar-row fxLayout="row">
-          <span fxFlex="220px">{{ 'ARMY_CREATOR.TOTAL_ALLOWANCE' | translate: lang }}</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">3</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">5</span>
+          <span fxFlex="220px">{{ battleGroup?.title }}</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">{{ battleGroup?.min }}</span>
+          <span class="army-creator__groupQuantity" fxFlex="50px">{{ battleGroup?.max }}</span>
           <span class="army-creator__groupQuantity" fxFlex="50px">0</span>
+          <button mat-flat-button color="accent" (click)="addGroup(battleGroup.title)"> Add group</button>
         </mat-toolbar-row>
-    </mat-toolbar>
-    <mat-toolbar>
-        <mat-toolbar-row fxLayout="row">
-          <span fxFlex="220px">{{ 'ARMY_CREATOR.HQ' | translate: lang }}</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">3</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">5</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">0</span>
-        </mat-toolbar-row>
-    </mat-toolbar>
-    <mat-toolbar>
-        <mat-toolbar-row fxLayout="row">
-          <span fxFlex="220px">{{ 'ARMY_CREATOR.ARMOR' | translate: lang }}</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">3</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">5</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">0</span>
-        </mat-toolbar-row>
-    </mat-toolbar>
-    <mat-toolbar>
-        <mat-toolbar-row fxLayout="row">
-          <span fxFlex="220px">{{ 'ARMY_CREATOR.INFANTRY' | translate: lang }}</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">3</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">5</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">0</span>
-        </mat-toolbar-row>
-    </mat-toolbar>
-    <mat-toolbar>
-        <mat-toolbar-row fxLayout="row">
-          <span fxFlex="220px">{{ 'ARMY_CREATOR.SPECIAL' | translate: lang }}</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">3</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">5</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">0</span>
-        </mat-toolbar-row>
-    </mat-toolbar>
-    <mat-toolbar>
-        <mat-toolbar-row fxLayout="row">
-          <span fxFlex="220px">{{ 'ARMY_CREATOR.FLEET' | translate: lang }}</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">3</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">5</span>
-          <span class="army-creator__groupQuantity" fxFlex="50px">0</span>
-        </mat-toolbar-row>
-    </mat-toolbar>
+      </mat-toolbar>
+    </ng-container>
+
 </div>
+
+<app-army-group></app-army-group>
+
+
 

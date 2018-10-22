@@ -10,6 +10,7 @@ import { CreateRosterService } from '../_services/create-roster.service';
 import { AppRoutingModule } from '../app-routing.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { ArmyCreatorComponent } from './army-creator/army-creator.component';
+import { ArmyGroupComponent } from './army-group/army-group.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ArmyCreatorComponent } from './army-creator/army-creator.component';
     DashboardComponent,
     LeftSidebarComponent,
     ArmyTriggerComponent,
-    ArmyCreatorComponent
+    ArmyCreatorComponent,
+    ArmyGroupComponent
   ],
   exports: [
     DashboardComponent

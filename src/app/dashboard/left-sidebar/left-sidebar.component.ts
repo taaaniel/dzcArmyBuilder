@@ -32,14 +32,4 @@ export class LeftSidebarComponent implements OnInit {
 
   }
 
-  loadRoster() {
-    // this.fullRoster.armySize = +this.route.snapshot.params['armySize'];
-    // this.fullRoster.gameSize = this.route.snapshot.params['gameSize'];
-    // this.fullRoster.armyName = this.route.snapshot.params['armyName'];
-    // const id = this.route.snapshot.queryParams['armyName'];
-
-    // console.log("armySize", this.route.snapshot.params);
-  }
-
-
 }

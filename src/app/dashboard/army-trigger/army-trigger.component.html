@@ -46,9 +46,7 @@
     </div>
     <div fxFlex>
         <button
-        mat-flat-button color="accent"
-        (click)="getDataToCreateRoster(roster.gameSize, roster.armySize, roster.armyName)"
-        [routerLink]="['/create-army', roster.armySize ,roster.gameSize, roster.armyName]">{{ 'DASHBOARD.CREATE_YOUR_ARMY' | translate: lang }}</button>
+        mat-flat-button color="accent" [routerLink]="['/create-army', roster.armySize ,roster.gameSize, roster.armyName]">{{ 'DASHBOARD.CREATE_YOUR_ARMY' | translate: lang }}</button>
     </div>
 
   </div>

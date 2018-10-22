@@ -13,7 +13,8 @@ import { IBattleGroups } from '../../_models/IBattleGroups';
 export class ArmyCreatorComponent implements OnInit {
 
   roster: IRoster;
-  battleGroups: IBattleGroups;
+  battleGroups: Array<object>;
+
 
   constructor(
     public locale: LocaleService,
@@ -30,6 +31,16 @@ export class ArmyCreatorComponent implements OnInit {
     const armyName = this.activeRoute.snapshot.params['armyName'];
     this.getDataToCreateRoster(gameSize, armySize, armyName);
     this.loadBattlegroups(armySize);
+
+  }
+
+  arrayOfButton(n: number): any[] {
+    return Array(n);
+  }
+
+  addGroup(title) {
+    console.log(title);
+    this.createRosterService.addedGroup(title);
   }
 
   getDataToCreateRoster(gameSize, armySize, armyName) {
@@ -45,90 +56,109 @@ export class ArmyCreatorComponent implements OnInit {
     console.log(armySize);
     switch (armySize) {
       case 'skirmish': {
-         this.battleGroups = {
-            total: {
-              min: 0,
-              max: 5
-            },
-            hq: {
-              min: 0,
-              max: 1
-            },
-            armor: {
-              min: 1,
-              max: 1
-            },
-            infantry: {
-              min: 1,
-              max: 2
-            },
-            special: {
-              min: 0,
-              max: 1
-            },
-            fleet: {
-              min: 0,
-              max: 0
-            }
-         };
+         this.battleGroups = [
+           {
+            title: 'total',
+            min: 0,
+            max: 5
+          },
+          {
+            title: 'hq',
+            min: 0,
+            max: 1
+          },
+          {
+            title: 'armor',
+            min: 1,
+            max: 1
+          },
+          {
+            title: 'infantry',
+            min: 1,
+            max: 2
+          },
+          {
+            title: 'special',
+            min: 0,
+            max: 1
+          },
+          {
+            title: 'fleet',
+            min: 0,
+            max: 0
+          }
+        ];
          break;
       }
       case 'clash': {
-        this.battleGroups = {
-          total: {
+        this.battleGroups = [
+          {
+            title: 'total',
             min: 0,
             max: 6
           },
-          hq: {
+          {
+            title: 'hq',
             min: 1,
             max: 1
           },
-          armor: {
+          {
+            title: 'armor',
             min: 1,
             max: 2
           },
-          infantry: {
+          {
+            title: 'infantry',
             min: 1,
             max: 2
           },
-          special: {
+          {
+            title: 'special',
             min: 0,
             max: 2
           },
-          fleet: {
+          {
+            title: 'fleet',
             min: 0,
             max: 1
           }
-       };
+        ];
+
          break;
       }
       case 'battle': {
-        this.battleGroups = {
-          total: {
+        this.battleGroups = [
+          {
+            title: 'total',
             min: 0,
             max: 7
           },
-          hq: {
+          {
+            title: 'hq',
             min: 1,
             max: 1
           },
-          armor: {
+          {
+            title: 'armor',
             min: 1,
             max: 2
           },
-          infantry: {
+          {
+            title : 'infantry',
             min: 1,
             max: 2
           },
-          special: {
+          {
+            title: 'special',
             min: 0,
             max: 2
           },
-          fleet: {
+          {
+            title: 'fleet',
             min: 0,
             max: 1
           }
-       };
+        ];
          break;
       }
     }
