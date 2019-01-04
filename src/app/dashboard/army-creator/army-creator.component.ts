@@ -14,6 +14,7 @@ export class ArmyCreatorComponent implements OnInit {
 
   roster: IRoster;
   battleGroups: Array<object>;
+  groupTypeName;
 
 
   constructor(
@@ -31,7 +32,7 @@ export class ArmyCreatorComponent implements OnInit {
     const armyName = this.activeRoute.snapshot.params['armyName'];
     this.getDataToCreateRoster(gameSize, armySize, armyName);
     this.loadBattlegroups(armySize);
-
+    console.log('llll', this.battleGroups)
   }
 
   arrayOfButton(n: number): any[] {
@@ -39,8 +40,13 @@ export class ArmyCreatorComponent implements OnInit {
   }
 
   addGroup(title) {
-    console.log(title);
     this.createRosterService.addedGroup(title);
+    this.checkNumberOfBattlegroupType(title);
+  }
+
+  checkNumberOfBattlegroupType(title) {
+    this.groupTypeName = this.battleGroups.filter(element => element.title === title);
+    console.log('33333', this.groupTypeName, this.battleGroups);
   }
 
   getDataToCreateRoster(gameSize, armySize, armyName) {

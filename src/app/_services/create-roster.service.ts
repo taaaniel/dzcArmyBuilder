@@ -9,13 +9,15 @@ export class CreateRosterService {
 
   fullRoster$ = new Subject<IRoster>();
   groupName$ = new Subject<string>();
+  battleGroups$ = new Subject<string>();
 
   shareRoster(roster: IRoster) {
     this.fullRoster$.next(roster);
+    console.log('roster', roster);
   }
 
   addedGroup(titleGroup: string) {
-    this.groupName$.next(titleGroup)
+    this.groupName$.next(titleGroup);
   }
 
 }

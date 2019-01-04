@@ -11,6 +11,7 @@ export class ArmyGroupComponent implements OnInit {
 
   groupName: string;
   battlegroupType;
+  battleGroutTotal;
 
   constructor(
     private createRosterService: CreateRosterService,
@@ -22,11 +23,16 @@ export class ArmyGroupComponent implements OnInit {
       this.groupName = groupName;
       this.createBattleGroups(groupName);
     });
+    this.createRosterService.battleGroups$.subscribe((battleGroups) => {
+      this.battleGroutTotal = battleGroups;
+      console.log('this.battleGroutTotal', this.battleGroutTotal);
+
+    });
   }
 
   createBattleGroups(groupName) {
     this.battlegroupType.push(groupName);
-      console.log("this.battlegroupType", this.battlegroupType, groupName);
+      console.log('this.battlegroupType', this.battlegroupType, groupName);
   }
 
 }
